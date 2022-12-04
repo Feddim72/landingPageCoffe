@@ -1,0 +1,10 @@
+// converting px to rem,with default 1 rem = 16px
+
+@function pxToRem($pxsize,$rembase: 16) {
+    @return  ($pxsize / $rembase) + rem;
+  }
+  
+@mixin boxShadow($arg) {
+    -webkit-box-shadow: $arg;
+            box-shadow: $arg;
+}

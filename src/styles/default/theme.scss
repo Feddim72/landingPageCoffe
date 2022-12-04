@@ -1,0 +1,10 @@
+@import './global.scss'; 
+@import './normalize.css';
+@import './mixins.scss';
+
+@import './components/nav';
+@import './components/content';
+@import './components/description';
+@import './components/gallery';
+@import './components/contact';
+@import './components/modalWindow';

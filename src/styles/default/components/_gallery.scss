@@ -1,0 +1,90 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gallery_title {
+        width: 100%;
+        h4 {
+            font: normal normal bold pxToRem(36)/49px Open Sans;
+            letter-spacing: 0px;
+            color: #2D0800;
+            opacity: 1;
+            text-align: center;
+        }
+    }
+
+    .gallery_items {
+        width: 88%;
+        margin: 23px 0 75px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .gallery__item {
+            margin: 23px 0 5px;
+            display: flex;
+            height: 398px;
+            width: 398px;
+            position: relative;
+
+            .item__img {
+                border-radius: 16px;
+                object-fit: cover;
+            }
+
+            .item__zoom {
+                position: absolute;
+                width: 20px;
+                top: 90%;
+                left: 90%;
+                cursor: pointer;
+                transition: all .4s ease-in-out;
+                &:hover {
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .gallery {
+        .gallery_items {
+            width: 100%;
+            margin-bottom: 30px;
+
+            div:nth-child(2),div:nth-child(3),div:nth-child(4){
+                display: none
+            }
+            .gallery__item {
+                width: inherit;
+                height: auto;
+    
+                .item__img {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .gallery {
+        .gallery_items {
+            width: 100%;
+            margin-bottom: 30px;
+
+            div:nth-child(2),div:nth-child(3),div:nth-child(4){
+                display: none
+            }
+            .gallery__item {
+                height: 354px;
+    
+                .item__img {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
